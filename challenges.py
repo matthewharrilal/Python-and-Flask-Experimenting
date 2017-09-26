@@ -14,7 +14,7 @@ app.db = mongo.develop_database
 api = Api(app)
 
 # Method to post resources and then the method to retrieve them will be after
-@app.route('/pets', methods=["POST", "GET"])
+@app.route('/pets', methods=["POST", "GET", "PATCH"])
 def pets_post():
     json_pets = {"pet_species": ["Cat", "Dog", "Snake", "Hamster", "Tiger"], "pet_name": ["Katy", "Spotty", "Sparrow"]}
     json_casting = json.dumps(json_pets)
